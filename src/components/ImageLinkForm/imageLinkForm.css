@@ -1,0 +1,19 @@
+.input-container {
+  height: 70px;
+}
+.input {
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.submit-btn:hover {
+  background-color: grey;
+}
