@@ -5,6 +5,7 @@ import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import SignIn from './components/SignIn/SignIn';
+import Register from './components/Register/Register';
 
 const ROUTES = Object.freeze({
   SIGN_IN: 'SIGN_IN',
@@ -30,11 +31,18 @@ function App() {
     setRoute(ROUTES.SIGN_IN);
   };
 
+  const navToRegister = () => {
+    setRoute(ROUTES.REGISTER);
+  };
+
   return (
     <div className='App'>
       <Navigation handleSignOut={handleSignOut} />
       <Logo />
-      {route === ROUTES.SIGN_IN && <SignIn handleSignIn={handleSignIn} />}
+      {route === ROUTES.SIGN_IN && (
+        <SignIn handleSignIn={handleSignIn} navToRegister={navToRegister} />
+      )}
+      {route === ROUTES.REGISTER && <Register />}
       {route === ROUTES.AUTHENTICATED && (
         <>
           <ImageLinkForm handleURLSubmit={handleURLChange} />

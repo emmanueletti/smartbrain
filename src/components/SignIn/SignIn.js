@@ -2,14 +2,14 @@
 import React from 'react';
 import './signIn.css';
 
-export default function SignIn({ handleSignIn }) {
+export default function SignIn({ handleSignIn, navToRegister }) {
   return (
     <main className='pa4 black-80'>
       <form className='tachyons-ovveride__sign-in-form measure center'>
         <fieldset id='sign_up' className='ba b--transparent ph0 mh0'>
           <legend className='f4 fw6 ph0 mh0'>Sign In</legend>
           <div className='mt3'>
-            <label className='db fw6 lh-copy f6' for='email-address'>
+            <label className='db fw6 lh-copy f6' htmlFor='email-address'>
               Email
             </label>
             <input
@@ -20,7 +20,7 @@ export default function SignIn({ handleSignIn }) {
             />
           </div>
           <div className='mv3'>
-            <label className='db fw6 lh-copy f6' for='password'>
+            <label className='db fw6 lh-copy f6' htmlFor='password'>
               Password
             </label>
             <input
@@ -40,9 +40,9 @@ export default function SignIn({ handleSignIn }) {
           />
         </div>
         <div className='lh-copy mt3'>
-          <a href='#0' className='f6 link dim black db'>
+          <p onClick={() => navToRegister()} className='f6 link dim black db'>
             Register
-          </a>
+          </p>
         </div>
       </form>
     </main>

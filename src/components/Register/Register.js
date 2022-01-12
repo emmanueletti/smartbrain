@@ -9,7 +9,7 @@ export default function Register({ handleSignIn }) {
         <fieldset id='sign_up' className='ba b--transparent ph0 mh0'>
           <legend className='f4 fw6 ph0 mh0'>Sign In</legend>
           <div className='mt3'>
-            <label className='db fw6 lh-copy f6' for='email-address'>
+            <label className='db fw6 lh-copy f6' htmlFor='email-address'>
               Name
             </label>
             <input
@@ -20,7 +20,7 @@ export default function Register({ handleSignIn }) {
             />
           </div>
           <div className='mv3'>
-            <label className='db fw6 lh-copy f6' for='password'>
+            <label className='db fw6 lh-copy f6' htmlFor='password'>
               Email
             </label>
             <input
@@ -35,14 +35,9 @@ export default function Register({ handleSignIn }) {
           <input
             className='b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib'
             type='submit'
-            value='Sign in'
+            value='Register'
             onClick={handleSignIn}
           />
-        </div>
-        <div className='lh-copy mt3'>
-          <a href='#0' className='f6 link dim black db'>
-            Register
-          </a>
         </div>
       </form>
     </main>
